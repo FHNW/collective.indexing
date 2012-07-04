@@ -164,7 +164,7 @@ def reindexOnReorder(self, parent):
     if mtool.checkPermission(ModifyPortalContent, parent):
         for obj in parent.objectValues():
             if (isinstance(obj, CatalogMultiplex) or
-                isinstance(obj, CMFCatalogAware)) and
+                isinstance(obj, CMFCatalogAware)) and \
 		mtool.checkPermission(ModifyPortalContent, obj):
                 obj.reindexObject(['getObjPositionInParent'])
 

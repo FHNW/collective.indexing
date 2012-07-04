@@ -1,14 +1,20 @@
 Changelog
 =========
 
-1.8.1 Released July 04th, 2012
-------------------------------
+1.8.2 (unreleased)
+------------------
 
-* Fix reindexing of container with protected content
+* fixed broken release
   [tomgross]
 
 1.8.1 (2012-07-04)
 ------------------
+
+* Fix reindexing of container with protected content
+  [tomgross]
+
+1.8 (2010-07-04)
+-----------------
 
 * Moved patching log calls to debug level.
   [hannosch]
