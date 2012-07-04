@@ -163,7 +163,9 @@ def reindexOnReorder(self, parent):
     mtool = getToolByName(self, 'portal_membership')
     if mtool.checkPermission(ModifyPortalContent, parent):
         for obj in parent.objectValues():
-            if isinstance(obj, CatalogMultiplex) or isinstance(obj, CMFCatalogAware):
+            if (isinstance(obj, CatalogMultiplex) or
+                isinstance(obj, CMFCatalogAware)) and
+		mtool.checkPermission(ModifyPortalContent, obj):
                 obj.reindexObject(['getObjPositionInParent'])
 
 PloneTool.reindexOnReorder = reindexOnReorder
